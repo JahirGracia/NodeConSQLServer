@@ -6,11 +6,11 @@ const Usuario = require('../models/usuario');
 const usuariosGet = async (req = request, res = response) => {
 
     try {
-        // const usuarios = await Usuario.findAll();
+        const usuarios = await Usuario.findAll();
 
-        const usuarios = await Usuario.findAll({
-            attributes: ['id', 'nombre']
-        });
+        // const usuarios = await Usuario.findAll({
+        //     attributes: ['id', 'nombre']
+        // });
 
         res.json({
             usuarios
